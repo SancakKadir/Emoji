@@ -21,7 +21,7 @@ import androidx.annotation.DrawableRes;
 import androidx.annotation.NonNull;
 import androidx.annotation.StringRes;
 import com.appsamurai.storyly.emoji.emoji.EmojiCategory;
-import com.vanniktech.emoji.ios.R;
+import com.appsamurai.storyly.emoji.ios.R;
 import com.appsamurai.storyly.ios.IosEmoji;
 
 @SuppressWarnings("PMD.MethodReturnsInternalArray") public final class SmileysAndPeopleCategory implements EmojiCategory {

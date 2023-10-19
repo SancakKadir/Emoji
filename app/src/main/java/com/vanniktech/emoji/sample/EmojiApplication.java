@@ -21,6 +21,7 @@ import android.app.Application;
 import android.os.StrictMode;
 import androidx.appcompat.app.AppCompatDelegate;
 import com.appsamurai.storyly.emoji.EmojiManager;
+import com.appsamurai.storyly.emoji.sample.BuildConfig;
 import com.appsamurai.storyly.ios.IosEmojiProvider;
 
 import static androidx.appcompat.app.AppCompatDelegate.MODE_NIGHT_AUTO_BATTERY;

@@ -24,6 +24,7 @@ import android.view.ViewGroup;
 import com.appsamurai.storyly.emoji.EmojiInformation;
 import com.appsamurai.storyly.emoji.StorylyEmojiTextView;
 import com.appsamurai.storyly.emoji.EmojiUtils;
+import com.appsamurai.storyly.emoji.sample.R;
 
 import java.util.ArrayList;
 import java.util.List;

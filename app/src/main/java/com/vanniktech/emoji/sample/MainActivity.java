@@ -29,6 +29,8 @@ import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.appsamurai.storyly.emoji.sample.R;
+
 // We don't care about duplicated code in the sample.
 @SuppressWarnings("CPD-START") public class MainActivity extends AppCompatActivity {
   static final String TAG = "MainActivity";

@@ -20,7 +20,6 @@ package com.vanniktech.emoji.sample;
 import android.app.Dialog;
 import android.graphics.PorterDuff;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -32,6 +31,8 @@ import androidx.core.content.ContextCompat;
 import androidx.fragment.app.DialogFragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.appsamurai.storyly.emoji.sample.R;
 
 // We don't care about duplicated code in the sample.
 @SuppressWarnings("CPD-START") public class MainDialog extends DialogFragment {

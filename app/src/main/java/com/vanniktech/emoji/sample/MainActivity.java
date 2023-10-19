@@ -57,11 +57,6 @@ import static android.view.View.VISIBLE;
     emojiButton.setColorFilter(ContextCompat.getColor(this, R.color.emoji_icons), PorterDuff.Mode.SRC_IN);
     sendButton.setColorFilter(ContextCompat.getColor(this, R.color.emoji_icons), PorterDuff.Mode.SRC_IN);
 
-    final CheckBox forceEmojisOnly = findViewById(R.id.main_activity_force_emojis_only);
-    forceEmojisOnly.setOnCheckedChangeListener((ignore, isChecked) -> {
-
-    });
-
     final RecyclerView recyclerView = findViewById(R.id.main_activity_recycler_view);
     recyclerView.setAdapter(chatAdapter);
     recyclerView.setLayoutManager(new LinearLayoutManager(this, RecyclerView.VERTICAL, false));

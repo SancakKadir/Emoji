@@ -130,7 +130,7 @@ The `rootView` is the rootView of your layout xml file which will be used for ca
 ### Displaying Emojis
 
 ```xml
-<com.vanniktech.emoji.EmojiTextView
+<com.appsamurai.storyly.emoji.StorylyEmojiTextView
   android:id="@+id/emojiTextView"
   android:layout_width="wrap_content"
   android:layout_height="wrap_content"/>

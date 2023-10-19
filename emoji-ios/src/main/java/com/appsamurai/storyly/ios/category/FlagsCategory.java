@@ -15,17 +15,27 @@
  *
  */
 
-package com.vanniktech.emoji.<%= package %>;
+package com.appsamurai.storyly.ios.category;
 
+import androidx.annotation.DrawableRes;
 import androidx.annotation.NonNull;
-import com.vanniktech.emoji.EmojiProvider;
+import androidx.annotation.StringRes;
 import com.appsamurai.storyly.emoji.emoji.EmojiCategory;
-<%= imports %>
+import com.vanniktech.emoji.ios.R;
+import com.appsamurai.storyly.ios.IosEmoji;
 
-public final class <%= name %>Provider implements EmojiProvider {
-  @Override @NonNull public EmojiCategory[] getCategories() {
-    return new EmojiCategory[] {
-      <%= categories %>
-    };
+@SuppressWarnings("PMD.MethodReturnsInternalArray") public final class FlagsCategory implements EmojiCategory {
+  private static final IosEmoji[] EMOJIS = CategoryUtils.concatAll(FlagsCategoryChunk0.get(), FlagsCategoryChunk1.get());
+
+  @Override @NonNull public IosEmoji[] getEmojis() {
+    return EMOJIS;
+  }
+
+  @Override @DrawableRes public int getIcon() {
+    return R.drawable.emoji_ios_category_flags;
+  }
+
+  @Override @StringRes public int getCategoryName() {
+    return R.string.emoji_ios_category_flags;
   }
 }

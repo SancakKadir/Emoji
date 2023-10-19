@@ -15,17 +15,18 @@
  *
  */
 
-package com.vanniktech.emoji.<%= package %>;
+package com.appsamurai.storyly.emoji;
 
-import androidx.annotation.NonNull;
-import com.vanniktech.emoji.EmojiProvider;
-import com.appsamurai.storyly.emoji.emoji.EmojiCategory;
-<%= imports %>
+import android.content.Context;
+import android.text.Spannable;
 
-public final class <%= name %>Provider implements EmojiProvider {
-  @Override @NonNull public EmojiCategory[] getCategories() {
-    return new EmojiCategory[] {
-      <%= categories %>
-    };
-  }
+/**
+ * EmojiProviders can implement this interface to perform text emoji image replacement in a more efficient way.
+ * For instance, the GooogleCompatEmojiProvider calls the corresponding AppCompat Emoji
+ * Support library replace method directly for emoji in the default size.
+ *
+ * @since 6.0.0
+ */
+public interface EmojiReplacer {
+  void replaceWithImages(Context context, Spannable text, float emojiSize, EmojiReplacer fallback);
 }

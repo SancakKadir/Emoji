@@ -23,7 +23,7 @@ import androidx.emoji.text.EmojiCompat;
 import android.text.Spannable;
 import com.vanniktech.emoji.EmojiProvider;
 import com.vanniktech.emoji.EmojiReplacer;
-import com.vanniktech.emoji.emoji.EmojiCategory;
+import com.appsamurai.storyly.emoji.emoji.EmojiCategory;
 <%= imports %>
 
 public final class <%= name %>Provider implements EmojiProvider, EmojiReplacer {

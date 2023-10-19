@@ -15,7 +15,7 @@
  *
  */
 
-package com.vanniktech.emoji.<%= package %>;
+package com.appsamurai.storyly.ios;
 
 import android.content.Context;
 import android.content.res.Resources;
@@ -31,11 +31,11 @@ import com.appsamurai.storyly.emoji.emoji.Emoji;
 
 import java.lang.ref.SoftReference;
 
-public class <%= name %> extends Emoji {
+public class IosEmoji extends Emoji {
   private static final int CACHE_SIZE = 100;
   private static final int SPRITE_SIZE = 64;
   private static final int SPRITE_SIZE_INC_BORDER = 66;
-  private static final int NUM_STRIPS = <%= strips %>;
+  private static final int NUM_STRIPS = 56;
 
   private static final Object LOCK = new Object();
 
@@ -51,7 +51,7 @@ public class <%= name %> extends Emoji {
   private final int x;
   private final int y;
 
-  public <%= name %>(@NonNull final int[] codePoints, @NonNull final String[] shortcodes, final int x, final int y,
+  public IosEmoji(@NonNull final int[] codePoints, @NonNull final String[] shortcodes, final int x, final int y,
                      final boolean isDuplicate) {
     super(codePoints, shortcodes, -1, isDuplicate);
 
@@ -59,7 +59,7 @@ public class <%= name %> extends Emoji {
     this.y = y;
   }
 
-  public <%= name %>(final int codePoint, @NonNull final String[] shortcodes, final int x, final int y,
+  public IosEmoji(final int codePoint, @NonNull final String[] shortcodes, final int x, final int y,
                      final boolean isDuplicate) {
     super(codePoint, shortcodes, -1, isDuplicate);
 
@@ -67,7 +67,7 @@ public class <%= name %> extends Emoji {
     this.y = y;
   }
 
-  public <%= name %>(final int codePoint, @NonNull final String[] shortcodes, final int x, final int y,
+  public IosEmoji(final int codePoint, @NonNull final String[] shortcodes, final int x, final int y,
                      final boolean isDuplicate, final Emoji... variants) {
     super(codePoint, shortcodes, -1, isDuplicate, variants);
 
@@ -75,7 +75,7 @@ public class <%= name %> extends Emoji {
     this.y = y;
   }
 
-  public <%= name %>(@NonNull final int[] codePoints, @NonNull final String[] shortcodes, final int x, final int y,
+  public IosEmoji(@NonNull final int[] codePoints, @NonNull final String[] shortcodes, final int x, final int y,
                      final boolean isDuplicate, final Emoji... variants) {
     super(codePoints, shortcodes, -1, isDuplicate, variants);
 
@@ -102,7 +102,7 @@ public class <%= name %> extends Emoji {
         strip = (Bitmap) STRIP_REFS[x].get();
         if (strip == null) {
           final Resources resources = context.getResources();
-          final int resId = resources.getIdentifier("emoji_<%= package %>_sheet_" + x,
+          final int resId = resources.getIdentifier("emoji_ios_sheet_" + x,
               "drawable", context.getPackageName());
           strip = BitmapFactory.decodeResource(resources, resId);
           STRIP_REFS[x] = new SoftReference<>(strip);

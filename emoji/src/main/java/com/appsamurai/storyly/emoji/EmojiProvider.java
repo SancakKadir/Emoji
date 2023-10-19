@@ -15,17 +15,20 @@
  *
  */
 
-package com.vanniktech.emoji.<%= package %>;
+package com.appsamurai.storyly.emoji;
 
 import androidx.annotation.NonNull;
-import com.vanniktech.emoji.EmojiProvider;
 import com.appsamurai.storyly.emoji.emoji.EmojiCategory;
-<%= imports %>
 
-public final class <%= name %>Provider implements EmojiProvider {
-  @Override @NonNull public EmojiCategory[] getCategories() {
-    return new EmojiCategory[] {
-      <%= categories %>
-    };
-  }
+/**
+ * Interface for a custom emoji implementation that can be used with {@link EmojiManager}.
+ *
+ * @since 0.4.0
+ */
+public interface EmojiProvider {
+  /**
+   * @return The Array of categories.
+   * @since 0.4.0
+   */
+  @NonNull EmojiCategory[] getCategories();
 }

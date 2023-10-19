@@ -15,27 +15,27 @@
  *
  */
 
-package com.vanniktech.emoji.<%= package %>.category;
+package com.appsamurai.storyly.ios.category;
 
 import androidx.annotation.DrawableRes;
 import androidx.annotation.NonNull;
 import androidx.annotation.StringRes;
 import com.appsamurai.storyly.emoji.emoji.EmojiCategory;
-import com.vanniktech.emoji.<%= package %>.R;
-import com.vanniktech.emoji.<%= package %>.<%= name %>;
+import com.vanniktech.emoji.ios.R;
+import com.appsamurai.storyly.ios.IosEmoji;
 
-@SuppressWarnings("PMD.MethodReturnsInternalArray") public final class <%= category %>Category implements EmojiCategory {
-  private static final <%= name %>[] EMOJIS = CategoryUtils.concatAll(<%= chunks %>);
+@SuppressWarnings("PMD.MethodReturnsInternalArray") public final class SmileysAndPeopleCategory implements EmojiCategory {
+  private static final IosEmoji[] EMOJIS = CategoryUtils.concatAll(SmileysAndPeopleCategoryChunk0.get(), SmileysAndPeopleCategoryChunk1.get());
 
-  @Override @NonNull public <%= name %>[] getEmojis() {
+  @Override @NonNull public IosEmoji[] getEmojis() {
     return EMOJIS;
   }
 
   @Override @DrawableRes public int getIcon() {
-    return R.drawable.emoji_<%= package %>_category_<%= icon %>;
+    return R.drawable.emoji_ios_category_smileysandpeople;
   }
 
   @Override @StringRes public int getCategoryName() {
-    return R.string.emoji_<%= package %>_category_<%= icon %>;
+    return R.string.emoji_ios_category_smileysandpeople;
   }
 }

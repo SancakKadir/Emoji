@@ -15,17 +15,12 @@
  *
  */
 
-package com.vanniktech.emoji.<%= package %>;
+package com.appsamurai.storyly.emoji.listeners;
 
 import androidx.annotation.NonNull;
-import com.vanniktech.emoji.EmojiProvider;
-import com.appsamurai.storyly.emoji.emoji.EmojiCategory;
-<%= imports %>
+import com.appsamurai.storyly.emoji.StorylyEmojiImageView;
+import com.appsamurai.storyly.emoji.emoji.Emoji;
 
-public final class <%= name %>Provider implements EmojiProvider {
-  @Override @NonNull public EmojiCategory[] getCategories() {
-    return new EmojiCategory[] {
-      <%= categories %>
-    };
-  }
+public interface OnEmojiClickListener {
+  void onEmojiClick(@NonNull StorylyEmojiImageView emoji, @NonNull Emoji imageView);
 }

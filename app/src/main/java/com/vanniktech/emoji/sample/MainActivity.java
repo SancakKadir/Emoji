@@ -23,15 +23,11 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.CheckBox;
 import android.widget.ImageView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import static android.view.View.GONE;
-import static android.view.View.VISIBLE;
 
 // We don't care about duplicated code in the sample.
 @SuppressWarnings("CPD-START") public class MainActivity extends AppCompatActivity {

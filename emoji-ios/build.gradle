@@ -1,4 +1,9 @@
 apply plugin: 'com.android.library'
+apply plugin: 'maven-publish'
+
+def groupId = "com.appsamurai.storyly"
+def artifactId = "storyly-emoji"
+def publishVersion = "0.7.0"
 
 android {
   compileSdkVersion rootProject.ext.compileSdkVersion as int
@@ -22,4 +27,18 @@ dependencies {
 dependencies {
   testImplementation rootProject.ext.testing.junit
   testImplementation rootProject.ext.testing.assertJ
+}
+
+project.afterEvaluate {
+  publishing {
+    publications {
+      library(MavenPublication) {
+        setGroupId groupId
+        setArtifactId artifactId
+        version publishVersion
+
+        artifact bundleReleaseAar
+      }
+    }
+  }
 }
